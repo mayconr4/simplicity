@@ -47,10 +47,89 @@ a {text-decoration: none;}
 }
 
 .topo {
-    background-color: yellow;
-    height: 12vh;
+ 
+    height: 12vh;  /*provisorio 12vh*/
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+} 
+
+.titulo-menu a {
+    color:  var(--cor-escura);
+    font-size: 1.2rem;   
+    padding: 1rem;
+    display: inline-block;  /*ordena o espaçamento do menu a ficar em uma linha*/
 }
+
+
+.menu a:hover, .menu a:focus {
+     background-color: var(--cor-intermediaria);
+} 
+
+/* Estilos para alista ul contida no menu nav */
+.links-menu {
+  /* Atenção! Neste ponto, fazemos com que  os links do menu iniciem escondidos (display:none;). Posteriormente, com a ajuda do CSS combinado com o JS, faremos os comandos necessarios para exibir/esconder de forma alternada. */   
+
+   display: none; 
+   
+   a {
+    color: var(--cor-escura);
+    font-weight: bold;
+    /* background-color: yellow; */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   } 
+}
+
+
+.links-menu.aberto {   /* < precisa estar tudo junto  por que cria uma relação entre as classes*/  
+
+    /* Ativamos o flex para anular o display:none (fazendop do links aparecerem) e ao mesmo tempo ter os recursos do flex.  */
+
+   display: flex;   
+
+   /* Mudamos a direção para coluna para voltar a exibir um link em cima do outro */
+   flex-direction: column; 
+
+
+   /* Usamos o position e coordenadas para ajustar a posição final e o tamanho que os links ocuparão na tela logo abaixo da palavra menu. */
+   position: absolute;
+   left: 0;
+   right: 0; 
+
+
+   background-color: var(--cor-clara);
+      
+} 
+
+/* exercícios */ 
+
+.destaque {
+    background-image: url(../imagens/fundo-destaque.jpg);
+    height: 88vh;
+    position: sticky;
+} 
+
+.destaque {
+   
+    display: flex; 
+    flex-direction: column;     
+    align-items: center;    
+
+    h2 {
+        color: var(--cor-clara);
+        margin-top: 180px;
+    }
+
+  
+      
+            
+
+  
+}
+
+
+/* .imgfundo {position: relative;} */
