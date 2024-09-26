@@ -107,29 +107,30 @@ a {text-decoration: none;}
 
 /* exercícios */ 
 
-.destaque {
-    background-image: url(../imagens/fundo-destaque.jpg);
-    height: 88vh;
-    position: sticky;
+
+
+.destaque { 
+
+ background-image: url(../imagens/fundo-destaque.jpg);
+    height: 88vh; 
+    background-attachment:fixed ;
+    position: sticky;        
+    display: flex; 
+    flex-direction: column;      
+    justify-content: center;
+    align-items: center;      
+     
+    h2, p {  
+        color: var(--cor-clara); 
+    }
 } 
 
-.destaque {
-   
-    display: flex; 
-    flex-direction: column;     
-    align-items: center;    
+ h2 {
+    color: var(--cor-clara);
+    font-size: 50px;
+} 
 
-    h2 {
-        color: var(--cor-clara);
-        margin-top: 180px;
-    }
 
-  
-      
-            
-
-  
-}
 
 
 /* .imgfundo {position: relative;} */
