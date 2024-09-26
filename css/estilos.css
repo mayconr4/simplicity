@@ -121,12 +121,23 @@ a {text-decoration: none;}
     align-items: center;      
      
     h2, p {  
-        color: var(--cor-clara); 
+        color: var(--cor-clara);  
+        text-align: center;
+
+        /* aplicar animação */
+        animation-name: animaDestaque; 
+        animation-duration: .5s;
     } 
 
    h2 { font-size: clamp(3rem, 10vw, 7rem); }
 
-   p { font-size: clamp(1.5rem, 3vw, 3rem);}
+   p { 
+    font-size: clamp(1.5rem, 3vw, 3rem); 
+    animation-delay: .5s;
+
+    /* antes da animação: o elemento assume do primeiro key frame (ou seja, o from). Portanto assim, forçamos a iniciar com opaciti zero e escala menor que 30% */
+    animation-fill-mode: backwards;
+    }
    
 }
 
@@ -139,9 +150,46 @@ clamp(
 
 )*/
 
- 
+ /* 1) Criar a animação  */
+@keyframes animaDestaque {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }   
+    to {
+        opacity: 1;
+        transform:scale(1) ;
+    }    
+    
+} 
 
 
 
 
-/* .imgfundo {position: relative;} */
+.front-end, .historia , .localizacao {
+    text-align: center;
+} 
+
+
+
+
+article {
+
+    h2 { 
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo);
+    } 
+
+    p {
+        padding: 0.5rem 0;
+         font-size: 1.2rem;
+    } 
+
+    address {
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+}
+
