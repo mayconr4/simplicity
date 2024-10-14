@@ -353,7 +353,8 @@ input, select, textarea {
     border: none;
     padding: 6px;
     height: 40px;
-    border-radius: 4px;
+    border-radius: 4px; 
+    background-color: var(--cor-clara);
 }
 
 textarea { height: auto; }
